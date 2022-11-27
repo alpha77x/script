@@ -264,5 +264,5 @@ local updateTab = Window:MakeTab({
 })
 updateTab:AddParagraph("2022-11-27","Add - AutoFarm Tap, Teleport Tap, Egg Tap")
 
-end
+--end
 --OrionLib:Destroy()
