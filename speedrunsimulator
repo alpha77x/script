@@ -1,8 +1,7 @@
 -- Script modification Prohibited [ Scripter A1lpha#5888 ]
 
-if game.PlaceId == 3101667897 then
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-    local Window = OrionLib:MakeWindow({Name = "Legends Of Speed", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+    local Window = OrionLib:MakeWindow({Name = "Speed Run Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
     
 OrionLib:MakeNotification({
 	Name = "Successfully executed",
@@ -13,62 +12,58 @@ OrionLib:MakeNotification({
 
 -- value
 _G.autoTap = true
-_G.autoTap1 = true
-_G.autoTap2 = true
-_G.hoop1 = true
-_G.hoop2 = true
-_G.Infjump = true
+_G.autoHatch = true
+_G.selectEgg = "Egg One"
 -- fuction
     
+function click()
+while getgenv().speed == true do
+game:GetService("ReplicatedStorage").Remotes.AddSpeed:FireServer()
+wait(0.0000000000001)
+end
+end
+
+function rebirth()
+    while getgenv().rebirth == true do
+        game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer()
+    wait(1)
+    end
+    end
+
+function fire()
+    while getgenv().orb == true do
+    for i, v in pairs(game:GetService("Workspace").OrbSpawns:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+            firetouchinterest(game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+    end
+    wait()
+    end
+end
+
+function ring()
+while getgenv().ring == true do
+for i, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent:IsA("MeshPart") and v.Parent then
+            firetouchinterest(game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+        end
+    end
+    wait()
+end
+end
+
+function autoHatch()
+    while _G.autoHatch == true do
+        game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(_G.selectEgg)
+    end
+end
+
 function autoTap()
     while _G.autoTap == true do
-    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Yellow Orb","City")
-    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb","Orange Orb","Desert Race")
-   local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Yellow Orb" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) 
-   wait(0.000000001)
+        game:GetService("ReplicatedStorage").Remotes.DeletePet:FireServer("Detective")
+game:GetService("ReplicatedStorage").Remotes.UpgradePet:FireServer("SoldierG")
+       wait(0.000000001)
    end
-end
-
-function autoTap1()
-    while _G.autoTap == true do
-    local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) local A_1 = "collectOrb" local A_2 = "Gem" local A_3 = "City" local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent Event:FireServer(A_1, A_2, A_3) 
-    wait(0.1)
-    end
-end
-
-function hoop1()
-    while _G.autoTap == true do
-                local children = workspace.Hoops:GetChildren()
-                    for i, child in ipairs(children) do
-                        if child.Name == "Hoop" then
-                        child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    wait(0.1)
-    end    
-end
-end
-end
-function hoop2()
-    while _G.autoTap == true do
-                    for i,v in pairs(game:GetService("Workspace").Hoops:GetChildren()) do
-				firetouchinterest(v, game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, 0)
-				wait(0.1)
-				firetouchinterest(v, game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, 1)
-				wait(0.1)
-                    end
-end
-end
-
-function autoTap2()
-        while _G.autoTap == true do
-        game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer("rebirthRequest")
-        wait(0.1)
-    end
-end
-
-function speed()
-    while _G.autoTap == true do
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(Window.flags.Speed)
-end
 end
 
 --
@@ -81,45 +76,61 @@ local Section = FarmTab:AddSection({
 	Name = "AutoFarm"
 })
 FarmTab:AddToggle({
-    Name = "Auto Farm",
-    Default = false,
-    Callback = function(Value)
-        _G.autoTap = Value
-        autoTap()
+	Name = "Auto Click",
+	--StartingState = false,
+	Description = nil,
+	Callback = function(state)
+	            getgenv().speed = state
+        if state then
+            click()
+        end
     end
 })
 FarmTab:AddToggle({
-    Name = "Auto Diamond",
-    Default = false,
-    Callback = function(Value)
-        _G.autoTap = Value
-        autoTap1()
+	Name = "Auto Rebirth",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state) 
+        getgenv().rebirth = state
+        if state then
+            rebirth()
+        end
     end
 })
 FarmTab:AddToggle({
-    Name = "Auto Hoops V1",
-    Default = false,
-    Callback = function(Value)
-         _G.autoTap = Value
-        hoop2()
+	Name = "Collect Orbs",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state) 
+        getgenv().orb = state
+        if state then
+            fire()
+        end
     end
 })
 FarmTab:AddToggle({
-    Name = "Auto Hoops V2",
-    Default = false,
-    Callback = function(Value)
-         _G.autoTap = Value
-        hoop1()
+	Name = "Collect Rings",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state) 
+        getgenv().ring = state
+        if state then
+            ring()
+        end
     end
 })
 FarmTab:AddToggle({
-    Name = "Auto Rebirth",
-    Default = false,
-    Callback = function(Value)
-        _G.autoTap = Value
-        autoTap2()
-    end
-})
+    Name = "AutoFarm Race",
+    Callback = function(bacon)
+    deez = bacon
+    spawn(function()
+    while deez do wait()
+    game:GetService("ReplicatedStorage").Remotes.RaceTrigger:FireServer()
+ 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-696.202148, 240.87236, 1280.2561, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end 
+end) 
+end})
 FarmTab:AddButton({
 	Name = "Anti AFK",
 	Callback = function()
@@ -133,28 +144,25 @@ FarmTab:AddButton({
 })
 
 
-local playerTab = Window:MakeTab({
-    Name = "Player",
+local eggTab = Window:MakeTab({
+    Name = "Egg",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
-local Section = playerTab:AddSection({
-	Name = "Player"
-})
-playerTab:AddLabel("Please don't use it yet")
-playerTab:AddSlider({
-    Name = "WalkSpeed",
-   -- Precise = true,
-    --ecise = true, --"false" will give you whole integers, "true" gives you 0.05's 
-    Default = 50, --What you want the default value when the script is ran!
-    Min = 1, -- The lowest number that you can select as the user
-    Max = 99999, --The highest number you can select as the user
-    Increment = 1,
-    Callback = function(Value)
-	_G.autoTap = Value
-        speed()
-	--	game:GetService("ReplicatedStorage").rEvents.changeSpeedJumpRemote:InvokeServer("changeSpeed",playerTab.flags.Speed)
+eggTab:AddToggle({
+	Name = "Auto Hatch",
+	Callback = function(Value)
+	    _G.autoHatch = Value
+		autoHatch()
     end
+})
+eggTab:AddDropdown({
+	Name = "Select Egg",
+	Default = "EggOne",
+	Options = {"EggOne", "EggTwo", "EggThree", "EggFour", "EggFive", "EggSix", "EggSeven", "EggEight", "EggNine", "EggTen", "EggTweleve", "EggThirteen"},
+	Callback = function(Value)
+		_G.selectEgg = Value
+	end
 })
 
 local teleportTab = Window:MakeTab({
@@ -168,87 +176,70 @@ local Section = teleportTab:AddSection({
 teleportTab:AddButton({
 	Name = "Spawn",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-538.0863647460938, 3.7032201290130615, 408.9749755859375)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1400.6224365234375, 197.25375366210938, -462.1972351074219)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Outer Space",
+	Name = "VIP",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-358.0108947753906, 3.7532200813293457, 571.9712524414062)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1364.394775390625, 196.96905517578125, -1569.90966796875)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Grass Course",
+	Name = "Desert",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1550.4871826171875, 34.14484405517578, 87.48204803466797)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2238.148681640625, 196.96905517578125, -658.12109375)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Frost Course",
+	Name = "Ice",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2022.6805419921875, 0.5099528431892395, 984.478515625)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3164.69873046875, 196.96905517578125, -658.12109375)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Parkour Challenge",
+	Name = "Lava",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1414.3121337890625, 34.14484405517578, -2058.336669921875)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4387.1982421875, 196.96905517578125, -658.12109375)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Snow city",
+	Name = "Graveyard",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-866.3868408203125, 3.7532200813293457, 2165.70654296875)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5522.1982421875, 197.09042358398438, -658.12109375)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Pirate Course",
+	Name = "Heaven",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1611.515380859375, 18.174205780029297, 4939.54833984375)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6486.4990234375, 197.11422729492188, -657.9210815429688)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Magma City",
+	Name = "Candyland",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1616.8270263671875, 3.8032281398773193, 4330.65234375)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7542.2421875, 196.96905517578125, -658.12109375)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Speed Desert",
+	Name = "Moon",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2497.674560546875, 14.644420623779297, 4355.77783203125)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8721.2421875, 196.96905517578125, -658.12109375)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Legends Highway",
+	Name = "Bikini Bottom",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3678.62548828125, 71.28314971923828, 5592.3525390625)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9936.6064453125, 197.11422729492188, -657.9210815429688)
   	end    
 })
 teleportTab:AddButton({
-	Name = "Legend Crystal Shop",
+	Name = "Adventure Time",
 	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4521.1982421875, 73.7432632446289, 6404.83251953125)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11074.8486328125, 197.1389617919922, -657.7511596679688)
   	end    
 })
-teleportTab:AddButton({
-	Name = "Desert Race",
-	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-416.1513366699219, 0.4179128408432007, -8679.525390625)
-  	end    
-})
-teleportTab:AddButton({
-	Name = "Magma Race",
-	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-83.71587371826172, 51.38234329223633, -10907.3564453125)
-  	end    
-})
-teleportTab:AddButton({
-	Name = "Grassland Race",
-	Callback = function()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(237.8160858154297, 92.09744262695312, -6037.08251953125)
-  	end    
-})
+
 
 local setTab = Window:MakeTab({
     Name = "Settings",
@@ -270,9 +261,7 @@ local updateTab = Window:MakeTab({
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
-updateTab:AddParagraph("2022-11-25","Add - Teleport")
-updateTab:AddParagraph("2022-11-24","Add - AutoHoops V1, AutoHoops V2, AntiAFK, Settings")
-updateTab:AddParagraph("2022-11-23","Add - AutoFarm, AutoDiamond, AutoRebith")
+updateTab:AddParagraph("2022-11-27","Add - AutoFarm Tap, Teleport Tap, Egg Tap")
 
 end
 --OrionLib:Destroy()
