@@ -1,5 +1,3 @@
--- Script modification Prohibited [ Scripter A1lpha#5888 ]
-
 local StrToNumber = tonumber;
 local Byte = string.byte;
 local Char = string.char;
