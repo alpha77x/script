@@ -1,4 +1,5 @@
 _G.main = "메인"
+
 local StrToNumber = tonumber;
 local Byte = string.byte;
 local Char = string.char;
