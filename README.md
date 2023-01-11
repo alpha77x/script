@@ -1,4 +1,4 @@
-# Alpha
+# Alpha Hub
 
 Hello! This is the official GitHub for Alpha
 
