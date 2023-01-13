@@ -9,7 +9,7 @@
 _G.main = "메인"
 _G.rainbowfriend = "몬스터 ESP"
 _G.player = "유저 ESP"
-_G.getallitem = "모든아이템 획득"
+_G.getallitem = "모든 아이템 획득"
 _G.getplaceitem = "모든 아이템 갖다놓기"
 _G.respawn = "재생성"
 _G.skipballoon = "스킵 풍선"
