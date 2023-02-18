@@ -1,4 +1,5 @@
-game:GetService('RunService').Stepped:connect(function()
+MouseButton1Click:Connect(function()
+    game:GetService('RunService').Stepped:connect(function()
 if noclip then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 end
@@ -11,4 +12,5 @@ if key == "e" then
 noclip = not noclip
 game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 end
+end)
 end)
