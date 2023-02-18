@@ -1,8 +1,6 @@
-noclip = false
 game:GetService('RunService').Stepped:connect(function()
 if noclip then
-       lp.Character.Head.CanCollide = false
-       lp.Character.Torso.CanCollide = false
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 end
 end)
 plr = game.Players.LocalPlayer
@@ -11,7 +9,6 @@ mouse.KeyDown:connect(function(key)
  
 if key == "e" then
 noclip = not noclip
-       lp.Character.Head.CanCollide = true
-       lp.Character.Torso.CanCollide = true
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 end
 end)
