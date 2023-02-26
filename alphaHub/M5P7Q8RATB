@@ -1,0 +1,14 @@
+local wallSize = Vector3.new(10, 1, 10)
+local wallColor = BrickColor.new("Medium stone grey")
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(13140.2900390625, -336.30377197265625, 1323.61328125)
+
+local wallPosition = Vector3.new(13140.2900390625, -336.30377197265625, 1323.61328125)
+
+local wall = Instance.new("Part")
+wall.Size = wallSize
+wall.BrickColor = wallColor
+wall.Position = wallPosition
+wall.Anchored = true
+
+wall.Parent = game.Workspace
