@@ -1,12 +1,1 @@
-local wallSize = Vector3.new(10, 10, 10)
-local wallColor = BrickColor.new("Medium stone grey")
 
-local wallPosition = Vector3.new(13132.876, -214.794342, 1237.39697, -0.852183461, 0.0568647832, -0.520144045, -7.61805495e-07, 0.994076908, 0.10867878, 0.523243129, 0.0926146433, -0.847135842)
-
-local wall = Instance.new("Part")
-wall.Size = wallSize
-wall.BrickColor = wallColor
-wall.Position = wallPosition
-wall.Anchored = true
-
-wall.Parent = game.Workspace
