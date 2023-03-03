@@ -1,4 +1,4 @@
-ScreenGui.AUniversalTimeTAP.MouseButton1Click:Connect(function()
+ScreenGui.AOnePieceGameTAP.MouseButton1Click:Connect(function()
 	ScreenGui.Credit.Visible = false
 	ScreenGui.main1.Visible = false
 	ScreenGui.BedWars.Visible = false
