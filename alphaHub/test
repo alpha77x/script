@@ -3,40 +3,13 @@
 
 -- Instances:
 
-local MainScript = Instance.new("ScreenGui")
-local Script = Instance.new("ScrollingFrame")
-local main = Instance.new("Folder")
-local UIGridLayout = Instance.new("UIGridLayout")
 local _0101Uzu = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 
 --Properties:
 
-MainScript.Name = "MainScript"
-MainScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-MainScript.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Script.Name = "Script"
-Script.Parent = MainScript
-Script.Active = true
-Script.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
-Script.BorderColor3 = Color3.fromRGB(28, 28, 28)
-Script.Position = UDim2.new(0.0890000165, 0, 0.164387718, 0)
-Script.Size = UDim2.new(0, 300, 0, 149)
-Script.CanvasSize = UDim2.new(0, 0, 5, 0)
-Script.ScrollBarThickness = 0
-Script.ScrollingEnabled = false
-
-main.Name = "main"
-main.Parent = Script
-
-UIGridLayout.Parent = main
-UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIGridLayout.CellPadding = UDim2.new(0, 10, 0, 10)
-UIGridLayout.CellSize = UDim2.new(0, 230, 0, 30)
-
 _0101Uzu.Name = "0101Uzu"
-_0101Uzu.Parent = main
+_0101Uzu.Parent = game.StarterGui["A0nePiece"].Credit.main
 _0101Uzu.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 _0101Uzu.Position = UDim2.new(0.570001602, 0, 0.0573234782, 0)
 _0101Uzu.Size = UDim2.new(0, 100, 0, 30)
@@ -49,18 +22,11 @@ UICorner.Parent = _0101Uzu
 
 -- Scripts:
 
-local function CBVAH_fake_script() -- MainScript.Script 
-	local script = Instance.new('Script', MainScript)
-
-	MainScript.ScreenGui.Parent = game.CoreGui
-	
-end
-coroutine.wrap(CBVAH_fake_script)()
-local function LGILBI_fake_script() -- _0101Uzu.Script 
+local function KOGB_fake_script() -- _0101Uzu.Script 
 	local script = Instance.new('Script', _0101Uzu)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://rawscripts.net/raw/loader_1038"))()
 	end)
 end
-coroutine.wrap(LGILBI_fake_script)()
+coroutine.wrap(KOGB_fake_script)()
