@@ -145,7 +145,7 @@ function DiscordLib:Window(text)
 	Title.Size = UDim2.new(0, 192, 0, 23)
 	Title.Font = Enum.Font.Gotham
 	Title.Text = text
-	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextColor3 = Color3.fromHSV(tick() % 20/20, 1, 1)
 	Title.TextSize = 13.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -284,56 +284,6 @@ function DiscordLib:Window(text)
 
 	ServersHoldPadding.Name = "ServersHoldPadding"
 	ServersHoldPadding.Parent = ServersHold
-  
-local k = 1
-while k <= 255 do
-	Title.TextColor3 = Color3.fromRGB(k/255,0/255,0/255)
-	k = k + 10
-	wait()
-end
-while true do
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.fromRGB(255/255,k/255,0/255)
-		k = k + 10
-		wait()
-	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.fromRGB(255/255 - k/255,255/255,0/255)
-		k = k + 10
-		wait()
-	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.fromRGB(0/255,255/255,k/255)
-		k = k + 10
-		wait()
-	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.fromRGB(0/255,255/255 - k/255,255/255)
-		k = k + 10
-		wait()
-	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.fromRGB(k/255,0/255,255/255)
-		k = k + 10
-		wait()
-	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.fromRGB(255/255,0/255,255/255 - k/255)
-		k = k + 10
-		wait()
-	end
-	while k <= 255 do
-		Title.TextColor3 = Color3.fromRGB(255/255 - k/255,0/255,0/255)
-		k = k + 10
-		wait()
-	end
-end
 
 	CloseBtn.MouseButton1Click:Connect(
 		function()
