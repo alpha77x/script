@@ -284,8 +284,6 @@ function DiscordLib:Window(text)
 
 	ServersHoldPadding.Name = "ServersHoldPadding"
 	ServersHoldPadding.Parent = ServersHold
-	
-local script = Instance.new('Script', Title)
 
 	local text = Title
 	local add = 10
