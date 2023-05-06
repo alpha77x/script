@@ -145,7 +145,7 @@ function DiscordLib:Window(text)
 	Title.Size = UDim2.new(0, 192, 0, 23)
 	Title.Font = Enum.Font.Gotham
 	Title.Text = text
-	Title.TextColor3 = Color3.fromHSV(tick() % 20/20, 1, 1)
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextSize = 13.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -284,6 +284,18 @@ function DiscordLib:Window(text)
 
 	ServersHoldPadding.Name = "ServersHoldPadding"
 	ServersHoldPadding.Parent = ServersHold
+	
+local object = Title.TextColor3
+local tweenInfo = TweenInfo.new(2.5)
+
+while true do
+local r, g, b = math.random(), math.random(), math.random()
+local goal = {Color = Color3.new(r, g, b)}
+
+local tween = TweenService:Create(object, tweenInfo, goal)
+tween:Play()
+tween.Completed:Wait()
+end
 
 	CloseBtn.MouseButton1Click:Connect(
 		function()
