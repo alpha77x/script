@@ -5,6 +5,7 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
+local k = 1
 local pfp
 local user
 local tag
@@ -285,13 +286,13 @@ function DiscordLib:Window(text)
 	ServersHoldPadding.Name = "ServersHoldPadding"
 	ServersHoldPadding.Parent = ServersHold
 	
-	local k = 1
-while k <= 255 do
+	
+	while k <= 255 do
 	Title.TextColor3 = Color3.new(k/255,0/255,0/255)
 	k = k + 10
 	wait()
-end
-while true do
+	end
+	while true do
 	k = 1
 	while k <= 255 do
 		Title.TextColor3 = Color3.new(255/255,k/255,0/255)
@@ -332,8 +333,8 @@ while true do
 		Title.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
 		k = k + 10
 		wait()
+		end
 	end
-end
 
 	CloseBtn.MouseButton1Click:Connect(
 		function()
