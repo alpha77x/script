@@ -10,6 +10,14 @@ local pfp
 local user
 local tag
 local userinfo = {}
+function cc()
+while true do
+	for a = 1,360,1 do
+	wait(0.1)
+        Title.TextColor3 = Color3.fromHSV(a/360,1,1)
+	end
+	end
+end
 
 pcall(function()
 	userinfo = HttpService:JSONDecode(readfile("discordlibinfo.txt"));
@@ -146,7 +154,7 @@ function DiscordLib:Window(text)
 	Title.Size = UDim2.new(0, 192, 0, 23)
 	Title.Font = Enum.Font.Gotham
 	Title.Text = text
-	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextColor3 = cc()
 	Title.TextSize = 13.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -287,12 +295,7 @@ function DiscordLib:Window(text)
 	ServersHoldPadding.Parent = ServersHold
 	
 	
-	while true do
-	for a = 1,360,1 do
-	wait(0.1)
-        Title.TextColor3 = Color3.fromHSV(a/360,1,1)
-	end
-	end
+	
 
 
 	CloseBtn.MouseButton1Click:Connect(
