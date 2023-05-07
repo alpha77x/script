@@ -281,60 +281,19 @@ function DiscordLib:Window(text)
 	ServersHoldLayout.Name = "ServersHoldLayout"
 	ServersHoldLayout.Parent = ServersHold
 	ServersHoldLayout.SortOrder = Enum.SortOrder.LayoutOrder
-	ServersHoldLayout.Padding = UDim.new(0, 7)
+	ServersHoldLayout.Padding = UDim.new(0, 7) are
 
 	ServersHoldPadding.Name = "ServersHoldPadding"
 	ServersHoldPadding.Parent = ServersHold
 	
 	
-	while k <= 255 do
-	Title.TextColor3 = Color3.new(k/255,0/255,0/255)
-	k = k + 10
-	wait()
-	end
 	while true do
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.new(255/255,k/255,0/255)
-		k = k + 10
-		wait()
+	for a = 1,360,1 do
+	wait(0.1)
+        Title.TextColor3 = Color3.fromHSV(a/360,1,1)
 	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
-		k = k + 10
-		wait()
 	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.new(0/255,255/255,k/255)
-		k = k + 10
-		wait()
-	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
-		k = k + 10
-		wait()
-	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.new(k/255,0/255,255/255)
-		k = k + 10
-		wait()
-	end
-	k = 1
-	while k <= 255 do
-		Title.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
-		k = k + 10
-		wait()
-	end
-	while k <= 255 do
-		Title.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
-		k = k + 10
-		wait()
-		end
-	end
+
 
 	CloseBtn.MouseButton1Click:Connect(
 		function()
