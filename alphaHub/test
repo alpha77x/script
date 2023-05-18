@@ -1752,6 +1752,7 @@ function DiscordLib:Window(text)
 		ServerTitleFrame.BorderSizePixel = 0
 		ServerTitleFrame.Position = UDim2.new(-0.0010054264, 0, -0.000900391256, 0)
 		ServerTitleFrame.Size = UDim2.new(0, 180, 0, 40)
+		ServerTitleFrame.TextScaled = true
 
 		ServerTitle.Name = "ServerTitle"
 		ServerTitle.Parent = ServerTitleFrame
