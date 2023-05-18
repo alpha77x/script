@@ -1763,6 +1763,7 @@ function DiscordLib:Window(text)
 		ServerTitle.Font = Enum.Font.GothamSemibold
 		ServerTitle.Text = text
 		ServerTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+		ServerTitle.TextScaled = true
 		ServerTitle.TextSize = 15.000
 		ServerTitle.TextXAlignment = Enum.TextXAlignment.Left
 		ServerTitle.TextWrapped = true
