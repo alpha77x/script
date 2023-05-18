@@ -1752,7 +1752,6 @@ function DiscordLib:Window(text)
 		ServerTitleFrame.BorderSizePixel = 0
 		ServerTitleFrame.Position = UDim2.new(-0.0010054264, 0, -0.000900391256, 0)
 		ServerTitleFrame.Size = UDim2.new(0, 180, 0, 40)
-		ServerTitleFrame.TextScaled = true
 
 		ServerTitle.Name = "ServerTitle"
 		ServerTitle.Parent = ServerTitleFrame
@@ -1760,7 +1759,7 @@ function DiscordLib:Window(text)
 		ServerTitle.BackgroundTransparency = 1.000
 		ServerTitle.BorderSizePixel = 0
 		ServerTitle.Position = UDim2.new(0.0751359761, 0, 0, 0)
-		ServerTitle.Size = UDim2.new(0, 97, 0, 39)
+		ServerTitle.Size = UDim2.new(0, 180, 0, 40)
 		ServerTitle.Font = Enum.Font.GothamSemibold
 		ServerTitle.Text = text
 		ServerTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
