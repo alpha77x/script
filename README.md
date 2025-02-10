@@ -10,4 +10,3 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/alpha77x/script/main/
 ``` lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/alpha77x/script/main/skeletonhub"))()
 ```
-Discord : https://discord.gg/ZVCuXWZKtB
